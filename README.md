@@ -1,2 +1,2 @@
 # Sudoku-Solver
-Accepts the input a displays the possible solutions to solve the sudoku
+Accepts the input and displays the possible solutions to solve the sudoku
