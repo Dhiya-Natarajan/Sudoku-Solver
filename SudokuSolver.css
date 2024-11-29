@@ -1,0 +1,184 @@
+/* Overall Sudoku container */
+.sudoku-solver {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.sudoku-solver h1 {
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Sudoku Grid */
+.sudoku-grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 2px;
+  margin-bottom: 20px;
+  border: 4px solid #000;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+/* Thicker borders for subgrid separation (3x3 blocks) */
+.sudoku-cell:nth-child(3n) {
+  border-right: 4px solid #000; /* Right edge of each subgrid */
+}
+.sudoku-cell:nth-child(3n + 1) {
+  border-left: 4px solid #000; /* Left edge of each subgrid */
+}
+
+/* Horizontal subgrid separators */
+.sudoku-cell:nth-child(n + 19):nth-child(-n + 27),
+.sudoku-cell:nth-child(n + 46):nth-child(-n + 54) {
+  border-bottom: 4px solid #000; /* Bottom edge of subgrid */
+}
+
+.sudoku-cell:nth-child(-n + 9),
+.sudoku-cell:nth-child(n + 64) {
+  border-top: 1px solid #ddd; /* Top edge of subgrid */
+}
+
+/* Cell Styling */
+.sudoku-cell {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Arial', sans-serif;
+  transition: background-color 0.3s ease;
+}
+
+/* Focus effect for cells */
+.sudoku-cell:focus {
+  outline: none;
+  border-color: #4CAF50;
+  background-color: #e8f5e9;
+}
+
+/* Subgrid row and column separation */
+.sudoku-cell:nth-child(3n+1),
+.sudoku-cell:nth-child(3n+2),
+.sudoku-cell:nth-child(3n+3) {
+  border-bottom: 1px solid #ddd;
+}
+
+/* Alternating row shading */
+.sudoku-cell:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+.sudoku-cell:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Button styling */
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.solve-btn, .reset-btn {
+  padding: 12px 25px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  border-radius: 5px;
+  font-family: 'Arial', sans-serif;
+}
+
+.solve-btn {
+  background-color: #4CAF50;
+}
+
+.solve-btn:hover {
+  background-color: #45a049;
+}
+
+.reset-btn {
+  background-color: #f44336;
+}
+
+.reset-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Status message styling */
+.status-message {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 5px;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+}
+
+.status-message.success {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+
+.status-message.error {
+  background-color: #f2dede;
+  color: #a94442;
+}
+
+/* Solution grid for results */
+.solutions {
+  margin-top: 20px;
+}
+
+.solution-board {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 2px;
+  margin-bottom: 10px;
+  border: 4px solid #333;
+  border-radius: 10px;
+}
+
+.solution-cell {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Focus effect for solution cells */
+.solution-cell:focus {
+  outline: none;
+  border-color: #4CAF50;
+}
+
+/* Solution cell separators */
+.solution-cell:nth-child(3n+1),
+.solution-cell:nth-child(3n+2) {
+  border-right: 1px solid #ddd;
+}
+
+.solution-cell:nth-child(3n) {
+  border-right: 2px solid #333;
+}
+
+.solution-cell:nth-child(-n+3),
+.solution-cell:nth-child(n+7) {
+  border-bottom: 2px solid #333;
+}
