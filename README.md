@@ -17,6 +17,7 @@ A web-based Sudoku solver that allows users to input their Sudoku puzzle and get
 ![Image Description](https://github.com/Dhiya-Natarajan/Sudoku-Solver/blob/main/Screenshot%202024-12-06%20114802.png)
 
 
+
 ## Tech Stack
 
 - **HTML5** for the structure of the grid and interface.
