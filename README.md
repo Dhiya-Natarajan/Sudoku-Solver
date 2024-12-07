@@ -10,6 +10,13 @@ A web-based Sudoku solver that allows users to input their Sudoku puzzle and get
 - **Validation:** Displays success or error messages based on puzzle validity.
 - **Responsive Design:** Works well on different screen sizes, optimized for both desktop and mobile use.
 
+![Image Description](https://github.com/Dhiya-Natarajan/Sudoku-Solver/blob/main/Screenshot%202024-12-06%20113554.png)
+
+![Image Description](https://github.com/Dhiya-Natarajan/Sudoku-Solver/blob/main/Screenshot%202024-12-06%20113933.png)
+
+![Image Description](https://github.com/Dhiya-Natarajan/Sudoku-Solver/blob/main/Screenshot%202024-12-06%20114802.png)
+
+
 ## Tech Stack
 
 - **HTML5** for the structure of the grid and interface.
